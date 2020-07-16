@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+i1=Item.create{name:'Fish and Chips', description:"yummy fish and chips", type:"drop-off meal", price:70.15, date:""}
