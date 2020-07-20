@@ -6,6 +6,9 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :type
       t.float :price
       t.date :date
+      t.string :allergens
+      t.integer :count
+      t.date :delivery_date
 
       t.timestamps
     end
