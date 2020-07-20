@@ -1,6 +1,5 @@
 class ItemsController < ApplicationController
     def index
-        byebug
         @items = Item.all
         render json: @items, status: :ok
     end
