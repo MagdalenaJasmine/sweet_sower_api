@@ -1,15 +1,16 @@
+
+require 'csv'
 class ItemsController < ApplicationController
     def index
         @items = Item.all
         render json: @items, status: :ok
     end
 
-    # def create
-    #     @item = Item.new(item_params)
-
-    #     @item.save
-    #     render json: @item, status: :created
-    # end
+    def read_csv
+        # byebug
+        temporaryFile = params["file"].tempfile
+        table = CSV.foreach(temporaryFile.path, :headers => true, encoding: "UTF-8") do |row| Item.create(row.to_hash) end
+    end
 
     # def destroy
     #     @item = Item.where(id: params[:id]).first
@@ -21,8 +22,8 @@ class ItemsController < ApplicationController
     # end
 
 
-    # private
-    # def item_params
-    #     params.require(:item).permit(:name, :description, :type, :price, :date)
-    # end
+    private
+    def item_params
+        params.require(:item).permit(:category, :name, :description, :product_type, :price, :date, :allergens, :delivery_date)
+    end
 end
