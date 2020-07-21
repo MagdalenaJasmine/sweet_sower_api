@@ -8,7 +8,9 @@
 
 
 
-i1=Item.create{name:'Fish and Chips', description:"yummy fish and chips", type:"drop-off meal", price:70.15, date:"2020-07-16", allergens:"fish", delivery_date:"202/07/21"}
+# i1=Item.create{name:'Fish and Chips', description:"yummy fish and chips", type:"drop-off meal", price:70.15, date:"2020-07-16", allergens:"fish", delivery_date:"202/07/21"}
 
-i2=Item.create{name:'Steak dinner', description:"steak with sides of beans", type:"drop-off meal", price:70.15, date:"2020-08-01", allergens:"none", delivery_date:"202/08/05"}
+# i2=Item.create{name:'Steak dinner', description:"steak with sides of beans", type:"drop-off meal", price:70.15, date:"2020-08-01", allergens:"none", delivery_date:"202/08/05"}
+
+user1 = User.create{email:"maggiec@gmail.com", password:"12345679"}
 

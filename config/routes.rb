@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   resources :cart_items
   resources :carts
-  resources :items
   resource :sessions, only: [:index, :create, :destroy]
   get '/current_user', to: 'sessions#show'
+  post '/items', to: 'items#read_csv'
+  resources :items
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
