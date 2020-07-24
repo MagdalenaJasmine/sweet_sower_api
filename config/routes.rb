@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users 
-  resources :users, only: [:index]
+  # devise_for :users 
+  resources :users, only: [:index, :create]
   resources :cart_items
   resources :carts
   resource :sessions, only: [:index, :create, :destroy]
