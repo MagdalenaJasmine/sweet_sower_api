@@ -5,10 +5,12 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :description
       t.string :product_type
-      t.float :price
+      t.float :price_in_cents
       t.date :date
       t.string :allergens
       t.date :delivery_date
+      t.integer :quantity
+      t.boolean :sale
 
       t.timestamps
     end

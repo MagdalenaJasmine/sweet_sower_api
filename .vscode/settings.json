@@ -1,0 +1,4 @@
+{
+    "ruby.interpreter.commandPath": "/usr/local/opt/ruby/bin/ruby",
+    "ruby.pathToBundler": "/usr/local/opt/ruby/bin/bundle"
+}

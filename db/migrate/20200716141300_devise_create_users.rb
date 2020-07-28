@@ -37,6 +37,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :household_size
       t.string :address
+      t.integer :current_order
+      t.boolean :admin
     end
 
     add_index :users, :email,                unique: true

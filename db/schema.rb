@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_16_201407) do
+ActiveRecord::Schema.define(version: 2020_07_28_070110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,26 +18,25 @@ ActiveRecord::Schema.define(version: 2020_07_16_201407) do
   create_table "cart_items", force: :cascade do |t|
     t.integer "cart_id"
     t.integer "item_id"
-    t.integer "count"
+    t.integer "quantity"
+    t.integer "item_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "carts", force: :cascade do |t|
-    t.boolean "complete"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+# Could not dump table "carts" because of following StandardError
+#   Unknown type 'cart_state' for column 'state'
 
   create_table "items", force: :cascade do |t|
     t.string "category"
     t.string "name"
     t.string "description"
     t.string "product_type"
-    t.float "price"
-    t.date "date"
+    t.float "price_in_cents"
     t.string "allergens"
     t.date "delivery_date"
+    t.integer "quantity"
+    t.boolean "sale"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -53,6 +52,8 @@ ActiveRecord::Schema.define(version: 2020_07_16_201407) do
     t.string "name"
     t.integer "household_size"
     t.string "address"
+    t.integer "current_order"
+    t.boolean "admin"
     t.string "authentication_token", limit: 30
     t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
