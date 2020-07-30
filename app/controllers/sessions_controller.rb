@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
         user= User.find_by(authentication_token: token)
 
         if user 
-            render json: {email: user.email}
+            render json: {email: user.email, admin: user.admin}
         else
             render json: {error: 'Could not find this user'}, status: 401
         end
