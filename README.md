@@ -1,25 +1,47 @@
-# README
+# Sweet and Sowers - Backend
+Sweet and Sowers is a San Francisco meal delivery service. They offer weekly meals and farmer's market boxes. This app allows the business owners to upload their weekly offerings via excel and their users to order weekly offerings, adjust portion sizing and see their total price. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You can find the backend for this project [here](https://github.com/MagdalenaJasmine/sweet_sower_api)
 
-Things you may want to cover:
+## Motivation
+I wanted to create an app that helped the Sweet and Sowers move from doing all of their business over email to something that required less work and tracking on their end. 
 
-* Ruby version
+## Screenshots
+Home Page
+![image](https://user-images.githubusercontent.com/62389500/101824668-631f9980-3ae1-11eb-89a4-d801092eeb70.png)
 
-* System dependencies
+## Technology Used
+* Javascript
+* React
+* Redux 
+* Bootstrap 
+* Ruby on Rails
 
-* Configuration
+## Features 
+Businss Owners Can: 
+* Login 
+* See weekly offerings in a table 
+* Upload weekly offerings via excel 
 
-* Database creation
+Customers Can: 
+* Create an account 
+* Login 
+* Order weekly offerings 
+* Customize portion sizing and quanitites 
+* See order total 
+* Submit order 
 
-* Database initialization
 
-* How to run the test suite
+## Installation
+Clone the front-end and run
+` & npm start `
 
-* Services (job queues, cache servers, search engines, etc.)
+clone the back-end repo and run
+* `& bundle install` 
+* `& rails db:migrate`
+* `& rails db:seed`
+* `& rails s`
 
-* Deployment instructions
+## Contributing 
+Contributions are welcome, submit a pull request! 
 
-* ...
-# sweet_sower_api
